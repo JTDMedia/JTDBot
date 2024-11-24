@@ -4,6 +4,15 @@ require('dotenv').config();
 const { version } = require('./package.json');
 const axios = require('axios');
 
+// Check if is up to date
+axios.get('https://api.github.com/repos/JTDMedia/JTDBot/releases/latest').then(res => {
+    if (res.data.tag_name !== version) {
+        console.log(chalk.red.bgYellow(`Your bot is not up to date! Please update to the latest version!`, version + ' -> ' + res.data.tag_name));
+    }
+}).catch(err => {
+    console.log(chalk.red.bgYellow(`Failed to check if bot is up to date!`));
+});
+
 const webhookConfig = {
     id: process.env.WEBHOOK_ID,
     token: process.env.WEBHOOK_TOKEN,
