@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, Events, GatewayIntentBits, REST, Routes } = require('discord.js');
+const { Client, Collection, Events, GatewayIntentBits, REST, Routes, ActivityType } = require('discord.js');
 require('dotenv').config();
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -23,6 +23,7 @@ for (const file of commandFiles) {
 
 client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
+	client.user.setActivity(process.env.STATUS, { type: ActivityType.Watching });
 });
 
 client.on(Events.InteractionCreate, async interaction => {
