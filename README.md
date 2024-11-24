@@ -11,6 +11,9 @@ JTDBot is a versatile and lightweight Discord bot that comes with a variety of f
 - **Custom Commands** ⚙️
 - **Lightweight and Fast** ⚡
 
+## 📣 Don't want to host?
+You can also use our public bot! [You can click here to invite](https://discord.com/oauth2/authorize?client_id=1310295264170348644&permissions=8&integration_type=0&scope=bot+applications.commands)
+
 ## 💻 Installation
 
 ### 1. Clone the repository:
