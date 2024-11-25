@@ -16,6 +16,9 @@ module.exports = {
 			subcommand
 				.setName('eval')
 				.setDescription('Run a piece of code and get the result'))
+    			.addStringOption(option =>
+		option.setName('code')
+			.setDescription('The code to eval'));
 		.addSubcommand(subcommand =>
 			subcommand
 				.setName('fetch')
