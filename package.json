@@ -1,10 +1,6 @@
 {
   "name": "jtdbot",
-<<<<<<< HEAD
-  "version": "1.0.2",
-=======
-  "version": "1.0.1",
->>>>>>> 443674ac6ac45e8c42572bb25bff422e1fde0e73
+  "version": "1.0.3",
   "description": "JTDBot - A Powerful, Lightweight Discord Bot",
   "main": "index.js",
   "scripts": {
